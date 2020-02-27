@@ -1,5 +1,5 @@
 {
-  "name": "urpc",
+  "name": "unirpc",
   "version": "0.0.1",
   "description": "Universal RPC - An unopinionated RPC barebones framework",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chiguireitor/urpc.git"
+    "url": "git+https://github.com/chiguireitor/unirpc.git"
   },
   "keywords": [
     "RPC"
@@ -16,7 +16,7 @@
   "author": "John \"Chiguireitor\" Villar",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/chiguireitor/urpc/issues"
+    "url": "https://github.com/chiguireitor/unirpc/issues"
   },
-  "homepage": "https://github.com/chiguireitor/urpc#readme"
+  "homepage": "https://github.com/chiguireitor/unirpc#readme"
 }

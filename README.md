@@ -1,4 +1,4 @@
-URPC
+UNIRPC
 ====
 
 An unopinionated RPC barebones framework
@@ -7,8 +7,8 @@ Usage:
 ==
 
 ```javascript
-const urpc = require('urpc')
-const service = urpc({
+const unirpc = require('unirpc')
+const service = unirpc({
   '*': async (req, res) => {
     console.log('this gets evaluated before anything on this tree')
   },
@@ -21,7 +21,7 @@ const service = urpc({
     }
   },
 
-  subtree: urpc(require('./another-file-with-req-res-pattern'))
+  subtree: unirpc(require('./another-file-with-req-res-pattern'))
 })
 
 service({method: 'subtree/submethod', params: { test: true } })
