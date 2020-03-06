@@ -1,6 +1,6 @@
 {
   "name": "unirpc",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Universal RPC - An unopinionated RPC barebones framework",
   "main": "index.js",
   "scripts": {

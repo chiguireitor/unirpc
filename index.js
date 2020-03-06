@@ -6,14 +6,14 @@ function Rpc(ob) {
     middlewared[x] = [ob[x]]
   }
 
-  async function call(method, req, res) {
+  async function call(method, req, res, ...rest) {
     let routines = middlewared[method]
     for (let i=0; i < routines.length; i++) {
-      await routines[i](req, res)
+      await routines[i](req, res, ...rest)
     }
   }
 
-  async function route(req, res) {
+  async function route(req, res, ...rest) {
     if (!req.method || req.method.length === 0) {
       throw new Error('No method specified')
     }
@@ -24,13 +24,13 @@ function Rpc(ob) {
     }
 
     if ('*' in middlewared) {
-      await call('*', req, res)
+      await call('*', req, res, ...rest)
     }
 
     let method = req.method.shift()
 
     if (method && method in middlewared) {
-      await call(method, req, res)
+      await call(method, req, res, ...rest)
     } else {
       throw new Error(`Method ${method} not found in path ${req._path}`)
     }
